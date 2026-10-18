@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "Historical observation; not a result from the new build scripts",
+  "target": {
+    "ref": "runtime/com.github.unrud.djpdf.OCR.Ces/x86_64/stable",
+    "commit": "a1cf9d52e49a911b48a3f84fc90b4f3ce5bd202e63a7bfb53252ba481c421a1e"
+  },
+  "timing_provenance": "Provided by the experiment author; elapsed times were not recovered from inspected files",
+  "samples": [
+    {"configuration": "System Flatpak 1.14.6", "n": 1, "elapsed_seconds": 51.283, "original_timing_artifact": null},
+    {"configuration": "Experimental Flatpak 1.19.2, HTTP/2", "n": 1, "elapsed_seconds": 58.072, "original_timing_artifact": null},
+    {"configuration": "Experimental Flatpak 1.19.2, HTTP/3 preference", "n": 1, "elapsed_seconds": 24.909, "original_timing_artifact": null}
+  ],
+  "derived": {
+    "http3_time_reduction_vs_experimental_http2_percent_rounded": 57.1,
+    "formula": "100 * (58.072 - 24.909) / 58.072"
+  },
+  "independently_inspected_evidence": {
+    "three_retained_installations_target_same_commit": true,
+    "http2_log_responses": {"HTTP/2 200": 7},
+    "http3_log_responses": {"HTTP/2 200": 1, "HTTP/3 200": 6},
+    "object_and_delta_requests_over_http3": true,
+    "complete_historical_command_line": null,
+    "historical_loaded_library_capture": null,
+    "execution_date_local": null,
+    "server_response_date_utc": "2026-10-18",
+    "note": "Server header date is not a verified local run timestamp. Sanitized excerpts omit nonessential headers and addresses."
+  },
+  "limitations": [
+    "Only one sample per configuration",
+    "Unknown original timing boundaries and exact invocation",
+    "CDN/cache/network order effects not controlled",
+    "Some requests remain HTTP/2",
+    "No general HTTP/3 performance conclusion"
+  ]
+}

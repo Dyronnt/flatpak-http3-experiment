@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "provenance": "Read-only inspection of the author's existing source trees; upstream availability and a clean rebuild have not been verified.",
+  "sources": {
+    "openssl": {
+      "url": "https://github.com/openssl/openssl.git",
+      "commit": "c1eeb9406b6142148f267594197d853403d10208",
+      "version": "3.5.4",
+      "tag": "openssl-3.5.4",
+      "license": "Apache-2.0"
+    },
+    "nghttp3": {
+      "url": "https://github.com/ngtcp2/nghttp3.git",
+      "commit": "d29ceea176cebc1f41c9d818c3b1825143d3f813",
+      "version": "1.19.0-DEV",
+      "license": "MIT",
+      "submodules": {
+        "lib/sfparse": "4b313cfd2e1b389ae632b36dcd50402307289af2",
+        "tests/munit": "11e8e3466b2d6a8bdfd4b05a3d1ee7805c5d3442"
+      }
+    },
+    "ngtcp2": {
+      "url": "https://github.com/ngtcp2/ngtcp2.git",
+      "commit": "48228939787d4b5bea94c7795b8c7fe0781d918e",
+      "version": "1.26.0-DEV",
+      "license": "MIT",
+      "submodules": {
+        "tests/munit": "cb04288a5225645be005a521c537b83c51934ef6",
+        "third-party/urlparse": "c8168839c89fc5c5917c375e1bd6ffeddf3f7f88"
+      }
+    },
+    "curl": {
+      "url": "https://github.com/curl/curl.git",
+      "commit": "7ab9cad703d11b6d9f43e6b4290e6bce6d5ab5e4",
+      "version": "8.23.1-DEV",
+      "license": "curl"
+    },
+    "ostree": {
+      "url": "https://github.com/ostreedev/ostree.git",
+      "commit": "1bc34f37152fc5beeba0fef1079c23c2eaacc4cb",
+      "version": "2026.5-devel",
+      "git_describe_without_local_changes": "v2026.4-55-g1bc34f37",
+      "license": "LGPL-2.0-or-later (patched file; other files may differ)",
+      "submodules": {
+        "bsdiff": "b817e9491cf7b8699c8462ef9e2657ca4ccd7667",
+        "libglnx": "b415d046880d585e5161bf230590543adeea4fe6"
+      }
+    },
+    "flatpak": {
+      "url": "https://github.com/flatpak/flatpak.git",
+      "commit": "ed564f7cce7e6f81926fc4a2d58125a4adf64649",
+      "version": "1.19.2 (development snapshot, not the release tag)",
+      "git_describe": "1.19.2-25-ged564f7c",
+      "license": "LGPL-2.1-or-later (project; inspect individual files)",
+      "subprojects": {
+        "bubblewrap": {
+          "url": "https://github.com/containers/bubblewrap.git",
+          "commit": "2a76602a8c71f36c1527cf9fc3417d9149822e0c"
+        },
+        "dbus-proxy": {
+          "url": "https://github.com/flatpak/xdg-dbus-proxy",
+          "commit": "72b40c8f6d9d585cfbdb249690724f740d207087"
+        },
+        "libglnx": {
+          "url": "https://gitlab.gnome.org/GNOME/libglnx.git",
+          "commit": "2ed30d8a697edb914664ef53e0406fc651a4a611"
+        },
+        "variant-schema-compiler": {
+          "url": "https://gitlab.gnome.org/alexl/variant-schema-compiler.git",
+          "commit": "4c18b9ef404bb97ba4cfd1312f9de7cffea62334",
+          "patch_directory": "variant-schema-compiler"
+        }
+      }
+    }
+  },
+  "patch": {
+    "path": "patches/ostree-http3.patch",
+    "base_commit": "1bc34f37152fc5beeba0fef1079c23c2eaacc4cb",
+    "sha256": "d797105c6c11925bf48eab89d5a0f1eaa6aae058152132f4a5d9da5f7a6ba0db"
+  },
+  "benchmark_target": {
+    "ref": "runtime/com.github.unrud.djpdf.OCR.Ces/x86_64/stable",
+    "commit": "a1cf9d52e49a911b48a3f84fc90b4f3ce5bd202e63a7bfb53252ba481c421a1e",
+    "remote_name": "flathub-experiment",
+    "flatpakrepo_url": "https://dl.flathub.org/repo/flathub.flatpakrepo"
+  },
+  "observed_system_packages": {
+    "flatpak": "1.14.6-1ubuntu0.1",
+    "libostree-1-1": "2024.5-1build2",
+    "libcurl4t64": "8.5.0-2ubuntu10.16",
+    "libcurl3t64-gnutls": "8.5.0-2ubuntu10.16",
+    "libnghttp2-14": "1.59.0-1ubuntu0.4"
+  },
+  "observed_build_tools": {
+    "os": "Linux Mint 22.3 (Ubuntu noble base), x86_64",
+    "gcc": "13.3.0",
+    "binutils": "2.42",
+    "meson": "1.7.0",
+    "ninja": "1.11.1",
+    "cmake": "3.28.3",
+    "autoconf": "2.71",
+    "automake": "1.16.5",
+    "libtool": "2.4.7"
+  }
+}

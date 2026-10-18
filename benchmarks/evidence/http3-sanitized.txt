@@ -1,0 +1,19 @@
+# Selected lines from the author's benchmark-turbo-http3.log, in original order.
+# Nonessential headers, addresses and other lines omitted. Trailing whitespace removed.
+* using HTTP/2
+> GET /repo/summary.idx HTTP/2
+< HTTP/2 200
+* using HTTP/3
+> GET /repo/config HTTP/3
+< HTTP/3 200
+* using HTTP/3
+> GET /repo/delta-indexes/oc/+dUuSakRtIo_hPyQtPPOW9IC5jp7+1MlK6SBxCGh4.index HTTP/3
+< HTTP/3 200
+> GET /repo/deltas/oc/+dUuSakRtIo_hPyQtPPOW9IC5jp7+1MlK6SBxCGh4/superblock HTTP/3
+< HTTP/3 200
+> GET /repo/objects/23/bb46c6940e9cd8bbb3f830bbddc222f51dc68a60e4e4c27087f29da798b8eb.filez HTTP/3
+> GET /repo/deltas/oc/+dUuSakRtIo_hPyQtPPOW9IC5jp7+1MlK6SBxCGh4/0 HTTP/3
+> GET /repo/objects/a1/cf9d52e49a911b48a3f84fc90b4f3ce5bd202e63a7bfb53252ba481c421a1e.commitmeta HTTP/3
+< HTTP/3 200
+< HTTP/3 200
+< HTTP/3 200

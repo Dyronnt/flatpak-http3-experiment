@@ -1,0 +1,6 @@
+> GET /repo/summary.idx HTTP/2
+< HTTP/2 200
+> GET /repo/deltas/example/0 HTTP/3
+< HTTP/3 200
+> GET /repo/objects/aa/example.filez HTTP/3
+< HTTP/3 200
